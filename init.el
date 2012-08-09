@@ -7,6 +7,8 @@
 ; For emacsclient use (see http://stackoverflow.com/questions/3984730/emacs-gui-with-emacs-daemon-not-loading-fonts-correctly)
 (setq default-frame-alist '((font . "Terminus 10")))
 (tool-bar-mode 0)
+;(setq-default indicate-empty-lines t)
+(setq-default indicate-buffer-boundaries t)
 
 ; evil mode
 (require 'evil)
