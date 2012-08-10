@@ -80,14 +80,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (evil-ex-define-cmd "nmu" 'notmuch-unread)
 (evil-ex-define-cmd "nmt" 'notmuch-today)
 (evil-ex-define-cmd "nmw" 'notmuch-week)
-(evil-ex-define-cmd "nms" 'notmuch-search)
+(evil-define-command evil-nms (&optional query) (interactive "<a>") (notmuch-search query))
+(evil-ex-define-cmd "nms" 'evil-nms)
 (evil-ex-define-cmd "nm" 'notmuch)
 (setq notmuch-saved-searches '(
                     ("unread" . "tag:inbox AND tag:unread")
                     ("mt-lists" . "tag:mt-lists AND tag:unread")
 		    ("spam" . "tag:spam")
 		    ))
-(setq mm-text-html-renderer "gnus-w3m")
 
 ; Org-mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
