@@ -9,6 +9,7 @@
 (tool-bar-mode 0)
 ;(setq-default indicate-empty-lines t)
 (setq-default indicate-buffer-boundaries t)
+(require 'minimap)
 
 ; evil mode
 (require 'evil)
@@ -82,6 +83,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (evil-ex-define-cmd "nmw" 'notmuch-week)
 (evil-define-command evil-nms (&optional query) (interactive "<a>") (notmuch-search query))
 (evil-ex-define-cmd "nms" 'evil-nms)
+(evil-ex-define-cmd "nmc" 'notmuch-mua-new-mail)
 (evil-ex-define-cmd "nm" 'notmuch)
 (setq notmuch-saved-searches '(
                     ("unread" . "tag:inbox AND tag:unread")
