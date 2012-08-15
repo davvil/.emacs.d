@@ -10,6 +10,7 @@
 ;(setq-default indicate-empty-lines t)
 (setq-default indicate-buffer-boundaries t)
 (require 'minimap)
+(show-paren-mode 1)
 
 ; evil mode
 (require 'evil)
